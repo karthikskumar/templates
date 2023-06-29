@@ -1,5 +1,5 @@
 ---
-title: "Turo: What Drives Reservations?"
+title: "This is a template"
 format: 
     revealjs:
         embed-resources: true
@@ -78,6 +78,15 @@ df = px.data.iris()
 # Use directly Columns as argument. You can use tab completion for this!
 fig = px.scatter(df, x=df.sepal_length, y=df.sepal_width, color=df.species, size=df.petal_length)
 fig.show()
+```
+
+
+## Slide with an itable {.smaller}
+```{python}
+#| echo: false
+#| fig-cap: "A line plot on a polar axis"
+
+u.view(df,"The iris dataset")
 ```
 
 ## Slide with some code
