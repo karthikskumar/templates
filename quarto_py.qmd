@@ -72,7 +72,7 @@ Custom footer text
 #| fig-cap: "A line plot on a polar axis"
 import plotly.express as px
 import utils as u
-u.init_env()
+u.init_env(itables=False)
 
 df = px.data.iris()
 # Use directly Columns as argument. You can use tab completion for this!
@@ -81,12 +81,17 @@ fig.show()
 ```
 
 
-## Slide with an itable {.smaller}
+## Slide with an itable {.smaller .smaller .smaller .smaller} 
 ```{python}
 #| echo: false
-#| fig-cap: "A line plot on a polar axis"
-
-u.view(df,"The iris dataset")
+u.itopt.style = "width:100%;margin:auto"
+u.itopt.classes = "display no-wrap cell-border"
+u.itopt.scrollX = "True"
+u.itopt.css = """
+.itables table td { font-size: 14px;}
+.itables table th { font-size: 16px;}
+"""
+u.view(df)
 ```
 
 ## Slide with some code
